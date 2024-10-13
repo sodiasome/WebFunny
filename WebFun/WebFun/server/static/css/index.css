@@ -1,0 +1,331 @@
+/*=================================
+*   新框架
+    背景色：#000000
+    标题栏：#7bcfa6
+    侧栏：  #549668
+    客户区标题：#758a99
+*==================================*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #d4d4d4;
+    color: #ffffff;
+    overflow: hidden;
+}
+div {
+    float: left;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #549668;
+}
+a:link {
+    color: #7bcfa6;
+    text-decoration: none;
+}
+a:visited {
+    color: #7bcfa6;
+    background-color: red;
+    text-decoration: none;
+}
+a:hover,a:active {
+    color: white;
+    background-color: red;
+    text-decoration: none;
+}
+/*标题栏*/
+header li {
+    float: left;
+}
+    header li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+        header li a:link {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        header li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+    header li.dropdown {
+        display: inline-block;
+    }
+/*标题栏-下载*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color:#ffffff;
+    background-color: #7bcfa6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        color: #ffffff;
+    }
+        .dropdown-content a:hover {
+            color:white;
+            background-color: red;
+        }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*收缩按钮*/
+#btn {
+    position: absolute;
+    top: 22%;
+    left: 100%;
+    height: 75px;
+    border: 0;
+    border-left: 1px solid rgb(23, 32, 43, 0.2);
+    background: #549668;
+    color: #fff;
+    cursor: pointer;
+}
+/*侧栏*/
+.box {
+    float: left;
+    position: relative;
+    left: 0;
+    height: 1000px;
+    width: 200px;
+    margin-left: 0;
+    display: block;
+    background-color: ##549668;
+    -moz-transition: margin-left 2s;
+    transition: margin-left 2s;
+}
+aside ul li {
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    list-style-type: none;
+    text-align: center;
+}
+    aside ul li a {
+        width: 100%;
+        height: 100%;
+        text-decoration-line: none;
+        color: #fff;
+        display: block;
+    }
+        aside ul li a:hover {
+            background: red;
+        }
+/*客户区*/
+section {
+    width: 100%;
+    height: 100%;
+    /*background: #d4d4d4;*/
+}
+    section h1 {
+        text-align: center;
+        border-bottom: 1px solid #fff;
+    }
+.container {
+    margin-left: 14px;
+    width: 63%;
+    height: 36%;
+    background-color: #333333;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+}
+
+
+}
+.tab-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #33344a;
+}
+    .tab-wrapper .tab-radio {
+        display: none;
+    }
+.tab-handler {
+    color: #BEBEBE;
+    position: relative;
+    /*z-index: 2;*/
+    display: block;
+    float: left;
+    height: 60px;
+    padding: 0px 20px;
+    font-size: 16px;
+    line-height: 60px;
+    transition: .3s;
+    transform: scale(.9);
+}
+.tab-radio:checked + .tab-handler {
+    color: #fff;
+    background-color: #758a99;
+    transform: scale(1);
+}
+    .tab-radio:checked + .tab-handler + .tab-content {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+.tab-wrapper .tab-content {
+    visibility: hidden;
+    position: absolute;
+    top: 106px;
+    left: 215px;
+    width: 63%;
+    padding: 30px;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.618em;
+    background-color: #fff;
+    opacity: 0;
+    transition: transform .5s, opacity .7s;
+    transform: translateY(20px);
+    height: 100%
+}
+/*音乐歌词栏*/
+audio {
+    float: right;
+    margin: 0px 0px 15px 58%;
+    width: 16%;
+}
+.mudic-title {
+    margin: 17px 37px 8px 22px;
+    font-size: 24px;
+    color: black;
+    float: right;
+}
+.music {
+    width: 100%;
+    height: 60%;
+    /* background-color: blue; */
+    margin-left: 0px;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    background-image: linear-gradient(transparent 10%, currentColor 30%, currentColor 70%, transparent 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-attachment: fixed;
+}
+.outer {
+    height: 288px;
+    width: 16%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border: none;
+    margin: 90px 0 auto;
+}
+.inner {
+    height: 100%;
+    width: 108%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/*记录文本*/
+#form-notepad{
+    margin:0;
+    padding:0;
+    width:200px;
+    height:300px;
+    background-color:#BEBEBE;
+}
+/*postmessage页面*/
+.iframe-content {
+    padding: 0px;
+    width: 100%;
+    height: 80%;
+    margin: 0px;
+}
+.page-bottom {
+    background-color: #ffffff;
+    style ="float:left;"
+}
+.page-btn {
+    float: left;
+    width: 20px;
+    margin-left: 5px;
+}
+/*搜索框*/
+#search {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    text-align: right;
+    width: 35%;
+}
+    #search input, #search select {
+        float: left;
+    }
+    #search img {
+        width: 7%;
+        height: 4%;
+        float: left;
+        margin-left: 1px;
+    }
+        #search img:hover {
+            cursor: pointer;
+        }
+        #search img:active {
+            background-color: #996600;
+        }
+/*右下角弹窗*/
+#rbj {
+    width: 380px;
+    height: 240px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+    background-color: #43CD80;
+}
+#rbj-close {
+    cursor: pointer;
+    float: right;
+    color: #ff0000;
+    font-size: 24px;
+    margin-right: 8px;
+}
+#right-bottom-jump {
+    background-color: #43CD80;
+    font-size: 17px;
+}
+h3 {
+    text-align: center;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+/*编辑框*/
+#editor {
+    width: 100%;
+    height: 323px;
+    border: 1px solid #ccc;
+    background-color: #D8BFD8;
+}
+
+#editcode-elect {
+    margin-left: -3px;
+}
+/*鼠标拖动栏*/
+.drag {
+    border: 1px transparent solid;
+    width: 0px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: e-resize;
+}

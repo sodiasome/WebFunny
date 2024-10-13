@@ -1,0 +1,117 @@
+win32软件创建步骤：设计窗口、注册窗口、创建窗口、显示和更新窗口
+
+CWindApp:
+    1.程序启动；
+    2.消息循环；
+    3.程序结束；
+CFrameWnd：
+    1.窗口创建；
+    2.消息处理；
+    3.窗口销毁；
+
+1.CObject
+2.框架类：
+    应用程序和线程支持类
+    命令相关的类
+    文档类
+    文档模板类
+3.窗口对话框和控件类、CWnd类、框架窗口类、框架窗口类、控件条类对话框类、视图类
+4.菜单类
+5.绘图和打印类
+6.简单的数据类型类
+7.数组、列表和映射类
+8.文件和数据可类
+9.Internet和网络类
+10.OLE类（Object Linking and Embedding）
+11.调试和异常类
+12.Afx函数：MFC提供的全局函数
+13.内核对象
+
+按资源分类：
+    图标资源 HICON
+    光标句柄 HCURSOR
+    窗口句柄 HWND
+    应用程序实例句柄 HINSTANCE
+    设备上下文 HDC
+
+CS_VREDRAW
+CS_HREDRAW
+
+MFC数据类型
+    VOID
+    DWORD
+    LPCSTR
+    CString字符串的使用
+        strSerial.Insert(0,_T('0'));             //在0位置插入字符串0
+        strLastTime.CompareNoCase(strTime)!=0    //字符串比较，小于-1，大于1，等于0
+        CompareString
+        CompareStringOrdinal                     //比较编程类的字符串
+
+MFC常见控件的添加
+MFC文件目录操作
+MFC数据操作
+    CMap
+        Lookup     查找值
+        SetAt      赋值
+        Operator[] 赋值
+        RemoveAll  删除所有
+        GetCount   数目
+        IsEmpty    是否为空
+        
+        遍历：
+            POSITION pos = map。GetStartPosition();
+            while(pos)
+            {
+                map。GetNextAssoc(pos,strKey,strValue);
+            }
+    
+    CTypedPtrList
+        CTypedPtrList<CObList,CGroupB *> m_listGroup;
+
+
+MFC网络
+MFC线程处理
+MFC进程处理
+    CreateProcess 创建进程
+    ExitProcess   结束进程
+    CloseHandle   结束其他进程、线程
+
+MFC的初始化过程
+RTTI（RunTime Type Information）运行时类型信息
+Dynamic Creation    动态生成
+Persistence         永续留存
+Message Mapping     消息映射
+Message Routing     消息循环
+
+MFC待处理问题：
+    1.AfxBeginThread系统学习
+    2.字符串处理
+    3.文件目录遍历
+    4.字符编码转换
+    5.线程同步
+
+MFC进程间通信：
+    IPC数据复制  WM _ COPYDATA
+
+
+C++编译器，不会将一个空的结构体完全看成是空的，编译器会为它分配1byte的内存，其实说白了__POSITION这个结构体，就相当于一个unsigned char的类型
+POSITION在MFC里用来存放各种List或Array对象的索引
+
+https://blog.csdn.net/liukang325/article/details/53535219  c++调用执行其他exe
+ 
+
+
+    _tcsrchr    //查找最后一个字符出现的位置 
+    _tcslen     //字符串长度
+    _tcscpy_s   //字符串拷贝
+    _tcscat_s   //字符串拼接
+    _ttoi()     //CString转int
+
+    memcpy_s
+    memmove_s
+
+
+为了与C语言稍微有一些隔离，Microsoft Windows团队希望定义自己的数据类型。于是，在
+Windows头文件WinNT.h   
+
+

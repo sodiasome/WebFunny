@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>红楼梦</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p><center style="font-family:楷体;font-size: 70;">林黛玉人物赏析!!</center></p>
+<p><font  style="text-indent:1em;font-family:楷体;font-size: 50;color:green;">
+“天上掉下个林妹妹”，这个林妹妹指代的就是林黛玉，说起林黛玉这个人物，就不得不说她的身世了。林黛玉是西方灵河岸降珠仙草转世身魂，荣府么女贾敏与巡盐御史林如海的独生女，贾母的外孙女，贾宝玉的姑表妹。她才貌双全，从小聪明清秀，父母对她爱如珍宝。五岁上学，六岁母亲早亡，十岁师从贾雨村，父亲林如海念及幼女在家无人照顾，在林黛玉方年十岁的时候送到了贾母身边，让贾母照料。</p>
+<p>外祖母贾史氏疼爱幺女贾敏，爱屋及乌疼爱林黛玉，抚养教育，寝室起居，一如嫡孙贾宝玉。与十一岁的贾宝玉同住同吃，吃穿用度都是贾母打点。命运像是安排好了一样，不幸的事情发生了，就在林黛玉十一岁的时候，父亲林如海因身染重病意外去世了，从此，林黛玉便常住贾府了，养成了说话尖酸刻薄不饶人的性格，这也是她十分强烈的自尊心的反映，黛玉初进贾府的时候，文中有一段描述如是说，“步步留心，时时在意，不肯轻易多说一句话，多行一步路，惟恐被人耻笑了他去”，无不流露着她那颗敏感的自尊心。“常听得母亲说过，他外祖母家与别家不同，他近日所见的这几个三等仆妇，吃穿用度，已是不凡了，何况今至其家”。而自己如今的处境是寄人篱下，不是“正经主子”，因而显得更加小心在意，惟恐自己的自尊心在众人面前受损。
+林黛玉自幼多愁伤感的性格和作诗的灵性，在贾府里面的经历也有所表现。</p>
+<p>十二岁的时候，元宵节，元春省亲，林黛玉偷偷替贾宝玉作了一首《杏帘在望》，元春评价这首比贾宝玉自作的前三首都好。二月二十二日，群芳入住大观园，林黛玉住了潇湘馆。</p>
+<p>　　三月中浣，林黛玉葬花。在如此喜庆的日子里，姑娘们都在院子里嬉戏打闹，唯独林黛玉拿起布袋在拾取花瓣。贾宝玉看见了说要把落花葬在水里，林黛玉则以为大观园里的水干净，但一流出去，外面人家脏的臭的混倒，仍旧把花遭塌了。所以她在园内畸角上做了一个花冢，把落花扫了，装在绢袋里，拿土葬了，任其随土自化，这样才洁净。林黛玉与贾宝玉共读《西厢记》，然后独自回房路过梨香院墙外时又聆听十二女伶演习《牡丹亭》，大受感动，不觉心痛神痴，眼中落泪。受这两本爱情教科书的启蒙，宝黛爱情开始萌芽。
+　　四月二十六日葬花，林黛玉感花伤己，吟唱《葬花词》。恰好贾宝玉寻来，听见“侬今葬花人笑痴，他年葬侬知是谁”，“一朝春尽红颜老，花落人亡两不知“等句，不觉恸倒山坡之上。林黛玉要躲，贾宝玉连忙赶上去，解释误会，这是宝黛第一次诉肺腑。
+　　元春赐端午节礼，独有薛宝钗和贾宝玉的一样，触动了贾宝玉；清虚观张道士为贾宝玉提亲，触动了林黛玉。五月初二，宝黛大吵，贾宝玉砸玉，这是二人闹得最大的一次。至初四日，二人和好。初六，贾宝玉在史湘云面前表达对科举仕途的不满，认林黛玉为知己，无意间被林黛玉听了去，不觉又喜又惊，又悲又叹，遂有宝黛第二次诉肺腑。晚间，贾宝玉托晴雯带给林黛玉两条旧手帕传情，林黛玉作《题帕三绝》。</p>
+<p>八月二十一日，大观园成立海棠诗社，林黛玉别号潇湘妃子。当日就在探春秋爽斋做海棠诗，众人都推林黛玉那首为上。李纨力排众议，评林黛玉诗“风流别致”，评薛宝钗诗“含蓄浑厚”。探春同意评林黛玉居第二。二十三日，众人齐聚藕香榭做菊花诗，林黛玉做的三首《咏菊》《问菊》《菊梦》包揽前三，拔得头筹。</p>
+<p>　七月十五日，林黛玉在房里设坛祭祖，作《五美吟》，分别咏怀西施、虞姬、明妃、绿珠、红拂。八月，薛宝钗馈赠江南土物，林黛玉睹物思乡。</p>
+<p>林黛玉十四岁，三月，作《桃花行》。初二，林黛玉重建桃花社。但因各种琐事耽误，直到暮春之际，才开了一社，命题柳絮词。此后又无下文，大观园诗社无疾而终。</p>
+<p>　　八月十二日，抄检大观园。到了潇湘馆，凤姐安抚林黛玉，不让她起床，且说些闲话。王善保家的从紫鹃房里抄出贾宝玉旧物，凤姐淡淡地化解了。十五日，中秋夜宴散席后，林黛玉与史湘云往凹晶馆联诗，联出“寒塘渡鹤影，冷月葬花魂”这等过于颓败凄楚的警句。十七日，贾宝玉作《芙蓉女儿诔》祭奠晴雯。林黛玉从花影中走出来提出修改意见，贾宝玉最后改句云“茜纱窗下，我本无缘；黄土垄中，卿何薄命”，林黛玉听了，忡然变色。</p>
+<p>有人说林黛玉是来还眼泪的，这眼泪绵延无尽，却是又相亲相爱。
+从九月初到十月中，薛宝钗坚持给林黛玉送了一个多月的燕窝。后来贾宝玉察觉了，婉拒薛宝钗好意，转而求之于贾母，悄悄叫人每日送一两燕窝。此事被赵姨娘偷听了去，恰应了当初林黛玉的担忧，招人嫉恨咒骂。燕窝事件给林黛玉拉仇恨，令潇湘馆与赵姨娘结怨。果然，那段时间贾府中关于林黛玉的流言四起，诽谤她与贾宝玉私定偷盟。</p>
+<p>　　林黛玉十三岁，元宵夜宴，贾母借着说书的机会当面辟谣，严厉驳斥所有对林黛玉的造谣诽谤。</p>
+<p>　　林黛玉受审、薛宝钗送燕窝，被贾宝玉称为“孟光接了梁鸿案”，意指钗黛和好。然而与此同时，林黛玉病情日益加重，时常“自寻烦恼”“只觉心酸”“只管酸痛”。连紫鹃都替她着急，巧用情辞试探贾宝玉真心。事后，紫鹃冷冷否定了薛宝钗这位“金兰契”，“凭人去欺负”一句更直指薛家。林黛玉明知其故，但迫于无奈，依然认了薛姨妈做干娘。</p>
+<p>贾宝玉在一次宴会中一时高兴把身上的所佩之物都给了众小厮们，林黛玉知道后，误剪贾宝玉的香囊，以为自己送给他的“荷包”也给小厮们拿走了，就道：“我给的那个荷包也给他们了？你明儿再想我的东西，可不能够了！”说完就赌气回房，把原来正替宝玉做的香袋儿“拿过来就绞”。后来宝玉跟她解释过后，他也知道了那“荷包”宝玉珍藏在怀里，可还是生气，当宝玉向她陪不是时，她还边哭边说：“你不用同我好一阵歹一阵的，要恼，就撂开手，这当了什么！”最后禁不住要宝玉“好妹妹”长、“好妹妹”短的赔不是。咋一看，林黛玉似乎真是太小气了，简直有些无理取闹的架势，但只要细加分析，就可以看出她的这种“小性儿”后面，遮住的正是她的美好品德，正是她那要求爱情专一。</p>
+<p>林黛玉十五岁，薛家婆子送给她蜜饯荔枝。林黛玉、贾宝玉梦魇，林黛玉咯血。</p>
+<p>　　林黛玉十六岁，十月，宝黛参禅，贾宝玉吐露心声，誓不变心。十一月，怡红院海棠反季节开花，通灵宝玉丢失。林黛玉一面暗自庆幸金玉姻缘或许可破，一面又担心贾宝玉吉凶，因而喜忧参半，辗转难寐。十二月十九日，元春薨逝。
+　　林黛玉十七岁，正月，王子腾在离京二百多里的地方被药死，贾府一个月内连失两大靠山。加之贾宝玉疯癫，贾政放了江西粮道，赴任在即，贾府不得不加紧筹办贾宝玉婚事。二月初二，贾母为了给贾宝玉冲喜，又想到金玉之说，遂与贾政议定贾宝玉、薛宝钗婚事。同时，为了蒙混贾宝玉，凤姐向贾母、王夫人献掉包计。初四，金玉婚事意外被傻大姐泄密，林黛玉急痛攻心，去贾母院见贾宝玉，二人最后一次参禅。林黛玉问：“宝玉，你为什么病了？”贾宝玉笑道：“我为林姑娘病了。”</p>
+<p>十一日，林黛玉焚稿。</p>
+<p>十二日，即林黛玉生日当天，贾宝玉、薛宝钗大婚，林黛玉泪尽而逝。当时守在身边的仅有紫鹃、探春、李纨三人，“惟有竹梢风动，月影移墙，好不凄凉冷淡”，描绘出“冷月葬诗魂”的实景。
+从初入贾府，从细心入微的敏感，到随性作诗的展露才华；从多愁善感，到纯洁的爱情；从对爱情的专一，到含泪而终。林黛玉这个人物深深地触动着我，内心久久的忧伤之感不能散去，忧愁不可怕，可怕的是当忧愁发生在一个诗人身上的时候，这种忧愁会被放大，而且会变得凄美。</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

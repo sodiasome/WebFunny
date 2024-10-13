@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>右下角弹窗广告</title>
+		
+		<style type="text/css">
+			/*右下角弹窗*/
+			#rbj{
+				width: 278px;
+				height: 188px;
+				position: fixed;
+				right: 0px;
+				bottom: 0px;
+				display: none;
+				background-color:#43CD80;
+			}
+			#rbj-close{
+				cursor: pointer;
+				float:right;
+				color:#ff0000;
+				font-size:18px;
+				margin-right:8px;
+			}
+			#right-bottom-jump{
+			}
+			h3{
+				text-align: center;
+				font-size: 25px;
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.5.1.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#rbj").slideToggle(800);			
+				$("#rbj-close").click(function(){
+					$("#rbj").slideToggle(800);
+				});
+			})
+		</script>
+	</head>
+	<body>
+		
+		<div id="rbj">
+			<span style="margin-left: 10px;">信息提示</span>
+			<span id="rbj-close">&times;</span>
+			<div style="border: 1px solid #000000;margin-left: 10px;margin-right: 10px;">
+				<h3>最新文章</h3>
+				<ul id="right-bottom-jump">
+					<li>
+						<span>时间：</span>
+						<span id="rbj-time"></span>
+					</li>
+					<li>
+						<span>作者：</span>
+						<span id="rbj-autho"></span>
+					</li>
+					<li>
+						<span>题目：</span>
+						<span id="rbj-title"></span>
+					</li>
+					<li>
+						<span>路径：</span>
+						<span id="rbj-path"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>

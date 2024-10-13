@@ -1,0 +1,38 @@
+
+2.0 TCP/IP
+1.对比功能，接收PLC的时间 和数据库的内容对比，不能有重复，对比一年数据
+
+2.回传结果和数据给PLC，打标机将对比结果发送给PLC判断是否一致，相同->打标指令
+
+3.将键盘按钮和软件按钮的“开始”按钮增加权限管控，没有授权无法手动打码
+
+
+# TCP/IP 发送时间，如果时间存在，则不打标
+# 用户管理模块-菜单设置
+# 没点击快捷键、按下打标按钮 判断当前用户权限
+# 返回两条数据，先返回打标数据，再返回ok
+
+g_CurUserInfo.dwRight1 & USER_RIGHT_ADMIN
+
+USERINFO //用户管理类
+#define USER_RIGHT_ADMIN			0x0001  //0:管理员     1
+#define USER_RIGHT_NORMALMARK 0x0002  //1:通用打标   2
+#define USER_RIGHT_MULMARK		0x0004  //2:多文档打标 4
+#define USER_RIGHT_CREATE			0x0008  //3:创建对象   8
+#define USER_RIGHT_EDIT				0x0010  //4:对象编辑   16
+#define USER_RIGHT_SYSTEMSET	0x0020  //5:系统设置   32
+#define USER_RIGHT_CALI				0x0040  //6:校正设置   64
+#define USER_RIGHT_SAVE			0x0080  //7:文件保存   128
+#define USER_RIGHT_OPEN			0x0100  //8:打开文档   256
+#define USER_RIGHT_LAYERSET		0x0200  //9:层参数设置 512
+#define USER_RIGHT_ADVANCE		0x0400  //10:高级参数  1024
+
+
+//屏蔽全局快捷键
+重载app类的PreTranslateMessage:
+BOOL CMyApp::PreTranslateMessage(MSG* pMsg)
+{
+    if(pMsg->message==WM_KEYDOW)
+        return true;
+    return CWinApp::PreTranslateMessage(MSG* pMsg);
+}

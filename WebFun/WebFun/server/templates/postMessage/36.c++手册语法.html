@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>c++手册</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p>2019年10月28日</p>
+<h1>运算符优先级</h1>
+<p>点击查看运算符优先级<a href="https://baike.baidu.com/item/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7/4752611?fr=aladdin">《运算符优先级》</a>（请打开网络查看哦）</p>
+<pre><code>参数表：
+实参内容              传入的实参   形参内容
+int x                x           x
+int *p               p           *p
+int arr[size]        arr         int*p/int arr[]
+int arr[size][size]  arr         int (*p)[size]
+int *parr[]          parr        int **parr
+int func(int x)      func        int (*pfunc)(int)
+</code></pre>
+
+<h1>const总结</h1>
+<pre><code>const 常量类型
+常变量
+const char 变量名;
+char const 变量名;
+
+常数组
+char const 数组名[大小];
+const char 数组名[大小];
+
+常指针
+指针常量:指针常量中，指针自身的值是一个常量，不可改变，始终指向同一个地址。在定义的同时必须初始化。
+char* const p;
+
+int a = 10, b = 20;
+int* const p = &amp;a;
+*p = 30; //p指向的地址是一定的，但其内容可以修改
+常量指针：常量指针中，指针指向的内容是不可改变的，指针看起来好像指向了一个常量。
+const char* p;
+char const* p;
+
+int a = 10, b = 20;
+const int *p = &amp;a;
+p = &amp;b;//指针可以指向其他地址，但是内容不可以改变
+*p=30;//错误！！
+
+常引用
+const char &amp; 引用名;
+char const &amp; 引用名;
+
+常函数成员
+类名::fun(形参)const{}
+
+常对象
+const 类名 对象名;
+类名 const 对象名;
+</code></pre>
+
+<h1>c++类型转换</h1>
+<pre><code>    1)static_cast
+    用法：static_cast&lt;...&gt;(...)
+    用途：
+    a)用于类层次结构中基类和派生类之间指针或者引用的转换。
+    b)用于基本数据类型之间的转换，如把int转换成char。
+    c)可以把空指针转换成目标类型的空指针。
+    d)把任何类型的表达式转换成void类型。
+
+    2)dynamic_cast
+    用法：dynamic_cast&lt;...&gt;(...)
+    用途：&lt;...&gt;里面是类的指针、类的引用或者void*。
+        如果&lt;...&gt;里面是类的指针类型，那么(...)里面也必须是指针。
+        一般情况下，dynamic_cast用于具有多态性的类(即有虚函数的类)的类型转换。
+
+    3)reinterpret_cast
+    用法：reinterpret_cast&lt;...&gt;(...)
+    用途：转换一个指针为其他类型的指针，也允许将一个指针转换为整数类型，反之亦然。这个操作符能够在非相关的类型之间进行转换。操作结果只是简单的从一个指针到别的指针的值的二进制拷贝，在类型之间指向的内容不做任何类型的检查和转换。这是一个强制转换。使用时有很大的风险，慎用之。
+
+    4)const_cast
+    用法：const_cast&lt;...&gt;(...)
+    用途：这个类型操纵传递对象的const属性，或者是设置或者是移除
+</code></pre>
+
+<h1>枚举</h1>
+<p><font color="#ee799f">●枚举：</font>
+C/C++语言可以使用#define和const创建符号常量,而使用enum工具不仅能够创建符号常量，还能定义新的数据类型。  </p>
+<pre><code>/************
+*枚举
+************/
+#include&amp;lt;iostream&amp;gt;
+using std::cout;
+enum Button {
+    UP = 72, DOWN = 80, LEFT = 75, RIGHT = 77,
+    W = 'w', S = 's', A = 'a', D = 'd'
+};
+int main()
+{
+    enum Button button;//定义一个枚举变量
+    button = RIGHT;
+    cout&lt;&lt;&quot;button=&quot;&lt;&lt;button&lt;&lt;std::endl;//button=77
+    cout&lt;&lt;&quot;W=&quot;&lt;&lt;W;       //W=119
+    return 0;
+}
+</code></pre>
+
+<h1>联合</h1>
+<p>union 定义： 在C和C++语言中，有时需要在同一段内存单元中存放不同类型的变量，如把一个整形变量int、一个字符型变量char和一个双精度实型变量double放在同一个地址开始的内存单元中，这3个变量虽然在内存中占的字节数不同，但都从同一地址开始，使用覆盖技术，后一个数据覆盖了前面的数据。这便是联合体union（或者叫共用体）诞生的目的所在。</p>
+<h1>引用</h1>
+<p><strong>定义：</strong>是某一个变量或对象的别名，对引用的操作与对其所绑定的变量或对象的操作完全等价。</p>
+<p><strong>对数组的引用</strong></p>
+<p><strong>对指针的引用</strong></p>
+<p><strong>引用作为函数的参数</strong></p>
+<p><strong>常引用：</strong>不允许通过该引用对其所绑定的变量或对象进行修改。</p>
+<p><strong>引用作为函数返回值</strong></p>
+<p><strong>引用实现多态</strong></p>
+<p>引用注意:
+		1、引用标识符不是求地址运算符，而是起标记作用。
+		2、引用的类型必须和其所绑定的变量的类型相同。
+		3、声明引用的同时必须对其初始化，否则系统会出错。
+		4、引用相当于变量或对象的别名，因此不能再将已有的引用名作为其他变量或对象的名字或别名。
+		5、引用不是定义一个新的变量或对象，因此不会为引用开辟新的空间存储这个引用。</p>
+<p><strong>引用作为函数返回值:</strong>必须在定义函数时在函数名前加引用标识符。</p>
+<pre><code>/************
+*引用
+************/
+#include&lt;iostream&gt;
+using std::cout;
+void swap(int &amp;a, int &amp;b);
+int main()
+{
+    //1.对数组的引用
+    int arr[3] = { 1,2,3 };
+    int(&amp;refeArr)[3] = arr;
+
+    for (int i = 0; i &amp;lt;  3; ++i)
+    {
+        cout &lt;&lt;  &amp;refeArr[i] &lt;&lt;&quot; &quot; &lt;&lt;&amp;arr[i] &lt;&lt; std::endl;
+        //00A1FE74 00A1FE74
+        //00A1FE78 00A1FE78
+        //00A1FE7C 00A1FE7C
+    }
+
+    //2.对指针的引用
+    int a = 10;
+    int* p = &amp;amp;a;
+    int* &amp;amp;prefe = p;
+
+    //3.引用作为函数参数
+    int value1 = 5, value2 = 6;
+    swap(value1, value2);
+    cout &lt;&lt;  value1 &lt;&lt;  value2;//65
+    //使用引用作为函数参数，系统不会花费时间在内存开辟空间
+    //参数数据大时一般使用引用
+
+    //4.常引用
+    const int &amp;crefe = a;
+    cefer = 11;//错误
+    return 0;
+}
+void swap(int &amp;amp;a, int &amp;amp;b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+</code></pre>
+
+<h1>数组</h1>
+<p><strong>数组指针和指针数组</strong><br />
+指针数组：（int *pArr[]）指针数组常常用于存储一些长度不相等的字符串数据。</p>
+<pre><code>/************
+*数组
+************/
+#include&lt;iostream&gt;
+#define SIZE 10
+using std::cout;
+int main()
+{
+    char* p1 = &quot;hello&quot;;//hello存放在静态存储区
+    char* p2 = &quot;i love china&quot;;
+    char* pArr[2] = { p1,p2 };//指针数组
+
+    for (int i = 0; i &amp;lt; 2; ++i)
+    {
+        cout &lt;&lt; pArr[i];//输出结果helloi love china
+    }
+    int arr[SIZE];
+    memset(arr, 0, sizeof(arr));//把数组arr的内存设置为0值
+    //arr[SIZE]={0};//初始化第一个元素为0，其余默认为0
+    for (int i = 0; i &amp;lt; SIZE; ++i)
+    {
+        cout &lt;&lt; arr[i];//0000000000
+    }
+    //通过指针访问数组元素
+    //通过数组下标访问数组元素
+    return 0;
+}
+</code></pre>
+
+<h1>指针</h1>
+<p><strong>指针与变量</strong></p>
+<pre><code>#include&lt;iostream&gt;
+
+using std::string;
+using std::cout;
+using std::endl;
+
+int main()
+{
+    int *p, variable=2019;
+    p = &amp;variable;
+    cout &lt;&lt; p &lt;&lt; endl;
+    cout &lt;&lt; &amp;variable&lt;&lt; endl;
+    cout &lt;&lt; (*p) &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+
+<p><strong>指针与数组</strong></p>
+<pre><code>#include&lt;iostream&gt;
+
+using std::string;
+using std::cout;
+using std::endl;
+
+int main()
+{
+    char *p;
+    char arr[] = &quot;helloworld&quot;;
+    p = arr;
+    cout &lt;&lt; &quot;p=arr,p=&quot;&lt;&lt;p &lt;&lt; endl;//指针还可以存放字符串！！
+    p = &amp;arr[1];
+    cout &lt;&lt; &quot;p=&amp;arr[1],p=&quot;&lt;&lt;p &lt;&lt; endl;
+    cout &lt;&lt; &quot;*p=&quot;&lt;&lt;*p &lt;&lt; endl;//数组首地址的值
+    cout &lt;&lt; &quot;&amp;arr=&quot;&lt;&lt;&amp;arr &lt;&lt; endl;
+    cout &lt;&lt; &quot;arr=&quot;&lt;&lt;arr &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+
+<p><strong>指针与函数</strong></p>
+<pre><code>#include&lt;iostream&gt;
+using std::string;
+using std::cout;
+using std::endl;
+
+int add(int a, int b)
+{
+    return a + b;
+}
+int* sub(int a, int b)
+{
+    int temp = a - b;
+    int *p = &amp;temp;
+    return p;
+}
+int main()
+{
+    int(*pFun)(int, int);//声明一个函数指针
+    add(1, 2);
+    pFun = add;
+    cout &lt;&lt; pFun &lt;&lt; endl;
+
+    cout &lt;&lt; sub(2019, 2018) &lt;&lt; endl;//指针作为函数返回值
+    return 0;
+}
+</code></pre>
+
+<p><strong>指针与结构体</strong></p>
+<pre><code>#include&lt;iostream&gt;
+
+using std::string;
+using std::cout;
+using std::endl;
+
+typedef struct student
+{
+    int id;
+    char name[32];
+    float score;
+}*pNode;
+int main()
+{
+    pNode stu = new student;
+    stu-&gt;id = 2019;
+    char nameArr[32] = &quot;hello&quot;;
+    memcpy( stu-&gt;name,nameArr,strlen(nameArr));
+    stu-&gt;score = 100;
+    cout &lt;&lt; stu-&gt;id &lt;&lt; endl;
+    cout &lt;&lt; stu-&gt;name &lt;&lt; endl;
+    cout &lt;&lt; stu-&gt;score &lt;&lt; endl;
+    delete stu;
+    return 0;
+}
+</code></pre>
+
+<p><strong>结构体数组</strong></p>
+<pre><code>#include&lt;iostream&gt;
+
+using std::string;
+using std::cout;
+using std::endl;
+using std::cin;
+
+typedef struct student
+{
+    int id;
+    char name[32];
+    float score;
+}*pNode;
+int main()
+{
+    student stuNode[5];//数组里面存放的是student类型的结构体
+    for (int i = 0; i &lt; 5; ++i)
+    {
+        stuNode[i].id = i;
+        //strcat(stuNode[i].name,&quot;hello&quot;);
+        cout &lt;&lt; &quot;输入名字：&quot; &lt;&lt; endl;
+        cin &gt;&gt; stuNode[i].name;
+        stuNode[i].score = i;
+    }
+    for (int j = 0; j &lt; 5; ++j)
+    {
+        cout &lt;&lt;&quot;学号：&quot;&lt;&lt; stuNode[j].id &lt;&lt; &quot;,名字&quot; &lt;&lt; stuNode[j].name &lt;&lt; &quot;,分数&quot; &lt;&lt; stuNode[j].score &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</code></pre>
+
+<p><strong>指针与对象</strong></p>
+<pre><code>#include&lt;iostream&gt;
+
+using std::string;
+using std::cout;
+using std::endl;
+using std::cin;
+
+class cat
+{
+public:
+    void sleep();
+};
+void cat::sleep()
+{
+    cout &lt;&lt; &quot;cat is sleeping!!&quot; &lt;&lt; endl;
+}
+int main()
+{
+    cat *p,myCat;
+    p = &amp;myCat;
+    p-&gt;sleep();
+    return 0;
+}
+</code></pre>
+
+<h1>动态内存分配</h1>
+<pre><code>4GB内存条有多大？ 4GB=4*1024MB=4*1024*1024KB=4*1024*1024*1024B（字节）  
+</code></pre>
+
+<p><strong>new</strong>
+分配单个内存</p>
+<pre><code>int* p=new int;
+int* pp=new int(4);//分配单个内存，并给4字节赋值4
+</code></pre>
+
+<p>分配多个内存单元</p>
+<pre><code>int* ppp=new int[4];//分配16个字节
+//https://github.com/TianDaGG/hello-world/blob/master/new.cpp  
+</code></pre>
+
+<p><strong>delete</strong>
+删除单个内存</p>
+<pre><code>delete p;
+p=NULL   
+</code></pre>
+
+<p>删除多个内存单元</p>
+<pre><code>int* ppp = new int[4];//分配16个字节
+memset(ppp, 0, sizeof(int)* 4);
+delete[] ppp;
+ppp = NULL; 
+</code></pre>
+
+<h1>c++内存5区</h1>
+<pre><code>全局数据区     全局变量、静态变量、全局常变量程序     加载时分配，运行后释放  
+代码区         程序运行的函数程序                 加载时分配，运行后释放  
+栈区            局部变量、函数参数、程序返回地址    函数调用时建立，调用后释放  
+堆区            new产生的对象                   用new分配，delete释放  
+字符串常量区   字符串常量             程序运行过程中生成，程序运行完成后释放  
+</code></pre>
+
+<h1>类</h1>
+<p><strong>构造函数和析构函数：</strong>  <br />
+<strong>构造函数和其他成员函数的区别：</strong><br />
+1）构造函数的命名必须和类名完全相同，而一般成员函数不能和类名相同。<br />
+2）构造函数的功能主要用于在创建类的对象时定义初始化的状态，它没有返回值，也不用void修饰。<br />
+3）构造函数不能被直接调用，必须在创建对象时由编译器自动调用。<br />
+4）在定义一个类的时候，如果用户没有定义构造函数，编译器会提供一个默认的构造函数。  </p>
+<p><strong>析构函数的特点：</strong>  <br />
+1）没有任何参数，不能被重载，但可以是虚函数，一个类只有一个析构函数。  <br />
+2）析构函数没有返回值。  <br />
+3）析构函数名字前加逻辑非运算符~，以与构造函数相区别。  <br />
+4）析构函数一般由用户自己定义，在对象消失时由系统自动调用，如果用户没有定义析构函数，系统将自动生成一个不做任何事的默认析构函数。    </p>
+<p><strong>浅拷贝和深拷贝：</strong>  <br />
+系统默认的是浅拷贝构造函数，直接将原对象的数据成员值依次复制给新对象中对应的数据成员，并没有为新对象另外分配内存资源。析构时同一块内存析构两次，程序就会出现异常。</p>
+<h1>对象</h1>
+<p>对象指针<br />
+对象数组<br />
+对象引用<br />
+动态对象  </p>
+<h1>友元</h1>
+<p><strong>友元函数</strong>  </p>
+<pre><code>#include &lt;cmath&gt;
+#include &lt;iostream&gt;
+using std::sqrt;
+using std::cout;
+using std::endl;
+
+class Point
+{
+public:
+    Point(double x, double y)
+    {
+        this-&gt;x = x;
+        this-&gt;y = y;
+    }
+    void GetXY();
+    friend double Distance(Point &amp;a, Point &amp;b);//类内声明友元函数
+private:
+    double x, y;
+};
+void Point::GetXY()
+{
+    cout &lt;&lt; &quot;(&quot; &lt;&lt; x &lt;&lt; &quot;,&quot; &lt;&lt; y &lt;&lt; &quot;)&quot; &lt;&lt; endl;
+}
+double Distance(Point &amp;a, Point &amp;b)//类外定义友元函数
+{
+    double length;
+    length = sqrt((a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y));
+    return length;
+}
+int main(void)
+{
+    Point p1(3.0, 4.0), p2(6.0, 8.0);
+    p1.GetXY();
+    p2.GetXY();
+    double d = Distance(p1, p2);
+    cout &lt;&lt; d &lt;&lt; endl;
+    system(&quot;pause&quot;);
+    return 0;
+}
+</code></pre>
+
+<p><strong>友元类</strong></p>
+<h1>静态数据成员和静态成员函数</h1>
+<p><strong>静态数据成员</strong>是类的数据成员的一种特例，采用static关键字来定义，属于类属性，每个类只有一个副本，由该类的所有对象共同维护和使用，从而实现了同类的不同对象之间的数据共享。
+条件：类内声明，类外定义。  <br />
+声明：static 数据类型 静态数据成员名；<br />
+定义：数据类型 类名::静态数据成员名=初始值;<br />
+特点：<br />
+1）静态数据成员脱离具体对象而独立存在，其存储空间是独立分配的，不是任何对象存储空间的一部分，但逻辑上所有对象都共享这一单元，所以对静态数据成员的任何操作都将影响共享这一存储单元的所有对象。<br />
+2）在对静态数据成员初始化时前面不加static关键字，以免与一般静态变量或对象混淆。  </p>
+<p><strong>静态成员函数：</strong>因为静态数据成员在定义类后、建立对象前就存在，所以不能通过成员函数存取静态数据成员，只能通过静态成员函数来存取。</p>
+<h1>继承和派生</h1>
+<p><strong>继承定义：</strong>
+利用已有的类定义新类，新类将拥有原有类的全部特性，原有类被称为<strong>基类或父类<strong>，新产生的类称为</strong>派生类或子类</strong>。派生类拥有基类的特征称为<strong>继承</strong>，由基类产生派生类的过程称为<strong>派生</strong>。  </p>
+<pre><code>#include&lt;iostream&gt;
+
+using std::cout;
+using std::endl;
+
+class animal
+{
+private:
+    int weight;
+public:
+    animal(int weight=0);
+    ~animal();
+    void Move();
+};
+void animal::Move()
+{
+    cout &lt;&lt; &quot;我是动物animal类,动物都会动&quot; &lt;&lt; endl;
+}
+animal::animal(int weight)
+{
+    this-&gt;weight = weight;
+    cout &lt;&lt; &quot;我是动物animal类的构造函数animal(),初始化动物体重为：&quot; &lt;&lt;weight&lt;&lt; endl;
+}
+animal::~animal()
+{
+    cout &lt;&lt; &quot;我是动物animal类的析构函数~animal()&quot; &lt;&lt; endl;
+}
+
+class cat :public animal
+{
+private:
+    int legs;
+public:
+    void Move();
+    cat(int legs,int weight);
+    ~cat();
+};
+void cat::Move()
+{
+    cout &lt;&lt; &quot;我是猫cat类,我会抓老鼠&quot; &lt;&lt; endl;
+}
+cat::cat(int legs = 0, int weight = 0) :animal(weight)
+{
+    this-&gt;legs = legs;
+    cout &lt;&lt; &quot;我是猫cat类的构造函数cat()，我有&quot; &lt;&lt; legs &lt;&lt; &quot;条腿,我的体重是：&quot; &lt;&lt; weight &lt;&lt; endl;
+}
+cat::~cat()
+{
+    cout &lt;&lt; &quot;我是猫cat类的析构函数~cat()&quot; &lt;&lt; endl;
+}
+int main()
+{
+    animal al(100);
+    al.Move();
+    cat ct(4);
+    ct.Move();
+    return 0;
+}
+</code></pre>
+
+<h1>多态</h1>
+<p><strong>多态定义：</strong>允许将父类对象设置为和一个或更多的它的子类对象相等的技术，赋值之后，父对象可以根据当前赋值给它的子对象的特征以不同的方式运作。<br />
+<strong>实现方式：</strong>覆盖、重载。<br />
+覆盖：子类重新定义父类的虚函数。<br />
+重载：允许存在多个同名函数，而这些函数的参数表不同。  </p>
+<h1>模板</h1>
+<p><strong>函数模板</strong>  </p>
+<pre><code>#include&lt;iostream&gt;
+
+template&lt;typename T1, typename T2&gt;
+T1 add(T1 a, T2 b)
+{
+    return a + b;
+}
+
+int main()
+{
+    float f = 9.9;
+    int i = 1;
+    std::cout &lt;&lt; add(f, i) &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+
+<p><strong>类模板</strong></p>
+<h1>stl</h1>
+<p><strong>序列式容器（vector、deque、list）</strong><br />
+定义：每个元素都有固定位置，位置取决于插入时机和地点，和元素的值无关。<br />
+<strong>关联式容器（set、multiset、map、multimap）</strong><br />
+定义：元素位置取决于特定的排序准则，和插入顺序无关。<br />
+<strong>迭代器</strong><br />
+定义：找到一种通用的方法访问具有不同结构的各种容器中的每一个元素  </p>
+<h1>输入输出流文件系统</h1>
+<p><strong>文件打开模式种类:</strong></p>
+<pre><code>    ios::in        为输入打开文件  
+    ios::out       为输出打开文件  
+    ios::ate       打开文件输出，文件指针处于文件末尾
+    ios::app       从文件尾添加数据
+    ios::trunc     如果文件存在清除文件内容
+    ios::nocreate  要打开的文件不存在则产生错误
+    ios::binary    以二进制方式打开文件
+    ios::noreplace 如果文件存在，且ate和app未被设定，则产生错误
+
+    输入流操作：seekg（）与tellg（）
+
+    输出流操作：seekp（）与tellp（）
+</code></pre>
+
+<p><strong>seekg（）</strong> <br />
+是对输入文件定位，它有两个参数：第一个参数是偏移量，第二个参数是基地址。</p>
+<p>第一个参数，可以是正负数值，正的表示向后偏移，负的表示向前偏移。<br />
+第二个参数可以是：<br />
+ios：：beg：表示输入流的开始位置<br />
+ios：：cur：表示输入流的当前位置<br />
+ios：：end：表示输入流的结束位置  </p>
+<p><strong>tellg（）</strong><br />
+函数不需要带参数，它返回<strong>当前定位指针的位置</strong>，也代表着输入流的大小。</p>
+<p>用来表示位置的类型是<strong>streampos</strong>或者<strong>streamoff</strong>类型，streampos是在stream中的绝对位置，非负。streamoff是与stream中指定点的相对位置，可以是负数。tellg/tellp的返回值是streampos，返回的是与stream起点的距离。seekg/seekp如果只有一个输入参数，那么这个参数类型为streampos,seekg/seekp如果有两个输入参数，那么第一个参数类型为streamoff</p>
+<pre><code>/******************
+*文件输入
+*******************/
+#include&lt;iostream&gt;
+#include&lt;fstream&gt;
+
+#define SIZE 20
+
+using std::ifstream;
+using std::ofstream;
+using std::cout;
+using std::cin;
+using std::endl;
+
+typedef struct student
+{
+    int id;
+    char name[32];
+    float score;
+}*pStu;
+
+void WriteFile();
+void ReadFile();
+
+int main()
+{
+    WriteFile();
+    //ReadFile();
+    return 0;
+}
+void WriteFile()
+{
+    ofstream writeFile;
+    char buff[256] = { 0 };
+    writeFile.open(&quot;./student_info.txt&quot;);
+    if (!writeFile)
+    {
+        cout &lt;&lt; &quot;文件打开失败！&quot; &lt;&lt; endl;
+        exit(1);
+    }
+    pStu myStudent = new student;
+    cout &lt;&lt; &quot;请输入学生的学号：&quot; &lt;&lt; endl;
+    cin &gt;&gt; myStudent-&gt;id;
+    cout &lt;&lt; &quot;请输入学生的名字：&quot; &lt;&lt; endl;
+    cin &gt;&gt; myStudent-&gt;name;
+    cout &lt;&lt; &quot;请输入学生的分数：&quot; &lt;&lt; endl;
+    cin &gt;&gt; myStudent-&gt;score;
+
+    writeFile &lt;&lt; myStudent-&gt;id;
+    writeFile &lt;&lt; ' ';
+    writeFile &lt;&lt; myStudent-&gt;name;
+    writeFile &lt;&lt; ' ';
+    writeFile &lt;&lt; myStudent-&gt;score;
+
+    delete myStudent;
+    writeFile.close();
+}
+void ReadFile()
+{
+    std::ifstream readFile(&quot;./student_info.txt&quot;, std::ios::in | std::ios::ate);
+
+    if (!readFile)
+    {
+        std::cout &lt;&lt; &quot;文件打开失败！&quot; &lt;&lt; std::endl;
+        exit(1);
+    }
+
+    std::streamoff nSize = readFile.tellg();//获取当前输入流大小
+    readFile.seekg(0, std::ios::beg);       //返回到输入流0（最开始位置）处
+
+    char cArr[SIZE] = { 0 };
+    if (nSize &gt;= SIZE)
+    {
+        std::cout &lt;&lt; &quot; 数组空间不够了&quot;;
+        exit(1);
+    }
+    readFile.read(cArr, nSize);
+    for (size_t i = 0; i &lt; nSize; ++i)
+        std::cout &lt;&lt; cArr[i];
+    readFile.close();
+}
+</code></pre>
+
+<h1>字符串</h1>
+<p><strong>strcpy(s1, s2);</strong> 复制字符串 s2 到字符串 s1。</p>
+<pre><code>char *strcpy(
+char *strDestination,
+const char *strSource 
+);
+</code></pre>
+
+<p><strong>strcat(s1, s2);</strong> 连接字符串 s2 到字符串 s1 的末尾。</p>
+<pre><code>char *strcat(
+   char *strDestination,
+   const char *strSource 
+);
+</code></pre>
+
+<p><strong>strlen(s1);</strong> 返回字符串 s1 的长度。</p>
+<p><strong>strcmp(s1, s2);</strong> 如果 s1 和 s2 是相同的，则返回 0；如果 s1&lt;s2 则返回值小于 0；如果 s1&gt;s2 则返回值大于 0。</p>
+<pre><code>int strcmp(
+const char *string1,
+const char *string2 
+);
+
+char arr1[5] = &quot;ab&quot;;
+char arr2[5] = &quot;ad&quot;;
+int n = strcmp(arr1, arr2);//arr1&lt;arr2(返回小于0，结果n=-1)
+
+strcpy(arr1 ,&quot;abe&quot;);
+strcpy(arr2, &quot;abc&quot;);
+n = strcmp(arr1, arr2);//arr1&gt;arr2(返回大于0，结果n=1)
+</code></pre>
+
+<p><strong>strchr(s1, ch);</strong> 返回一个指针，指向字符串 s1 中字符 ch 的第一次出现的位置。</p>
+<pre><code>char *strchr(
+   const char *str,
+   int c 
+);
+</code></pre>
+
+<p><strong>strstr(s1, s2);</strong> 返回一个指针，指向字符串 s1 中字符串 s2 的第一次出现的位置</p>
+<pre><code>char *strstr(
+   const char *str,
+   const char *strSearch 
+);
+</code></pre>
+
+<p><strong>char和string的转换</strong></p>
+<pre><code>#include&lt;iostream&gt;
+
+using std::string;
+using std::cout;
+using std::endl;
+
+int main()
+{
+    //string转char *
+    string str = &quot;abc&quot;;
+    char arr[20];
+    strcpy(arr,str.c_str());
+    cout &lt;&lt; arr &lt;&lt; endl;
+
+    //char *转string
+    string str2;
+    char arr2[] = &quot;hello&quot;;
+    str2 = arr2;//直接赋值
+    cout &lt;&lt; str2.c_str();
+    return 0;
+}  
+</code></pre>
+
+<p><strong>常用字符与字符串处理函数</strong></p>
+<pre><code>strset();   //将字符数组中所有的字符都设置为指定字符C，并以\0结束
+strlwr();   //将字符串中的所有字符转化成小写字符
+strupr();   //将字符串中的所有字符转换成大写字符
+
+toupper();  //将小写字符转成大写字符
+tolower();  //将大写字符转成小写字符
+
+atoi();     //将数字字符转换成整形数
+atol();     //将数字字符转换成长整型数
+atof();     //将数字字符转换成浮点数
+ultoa();    //将无符号长整型数转换成指定的进制数并以字符串的形式存放到字符数组中
+</code></pre>
+
+<h1>异常处理</h1>
+<p>定义：用于一些无法避免，但是又可以预料的错误，如运行环境问题造成程序异常中止、内存不足、打开文件不存在、文件读写不成功、执行了0以外的操作等等。</p>
+<pre><code>#include &lt;iostream&gt;
+using std::cerr;
+using std::cout;
+using std::cin;
+using std::endl;
+
+double division(int a, int b) {
+    if (b == 0) {
+        throw 1;
+    }
+    if (b == 1) {
+        throw false;
+    }
+    return (a / b);
+}
+
+int main() {
+    int x, y;
+    cout &lt;&lt; &quot;请输入被除数x和除数y：\n&quot;;
+    cin &gt;&gt; x &gt;&gt; y;
+    double z = 0;
+
+    try {
+        z = division(x, y);
+        cout &lt;&lt; z &lt;&lt; endl;
+    }
+    catch (int) {   //===============catch捕获的是throw的内容
+        cerr &lt;&lt; &quot;错误：除数为0&quot; &lt;&lt; endl;
+    }
+    catch (bool) {
+        cerr &lt;&lt; &quot;触发了假的错误：除数为1&quot; &lt;&lt; endl;
+    }
+    return 0;
+}
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

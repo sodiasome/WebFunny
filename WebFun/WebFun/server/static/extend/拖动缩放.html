@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>鼠标进行伸缩div</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.dragdom {
+				background: #cccccc;
+				width: 100px;
+				height: 600px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.dragdom .drag {
+				border: 1px transparent solid;
+				width: 0px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				cursor: e-resize;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="dragdom"><div class="drag"></div></div>
+	</body>
+	<script type="text/javascript" src="./jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="./mouseSize.js"></script>
+	<script>
+		$(function () {
+			$('.drag').dragDiv();
+		})
+	</script>
+</html>
+
+ 

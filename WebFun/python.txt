@@ -1,0 +1,11 @@
+pip install flask flask_login simplejson pymysql flask_sqlalchemy flask_wtf wtforms flask_login simplejson pymysql flask_sqlalchemy flask_wtf cryptography
+
+pip3 install cryptography -i https://pypi.douban.com/simple
+
+
+
+
+python3 -m pip install PyMySQL[rsa]
+
+
+

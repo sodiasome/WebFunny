@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>20191012</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>1、矩阵转换</h1>
+<p>2019年10月12日</p>
+<pre><code>//矩阵转置
+#include&lt;iostream&gt;
+
+#define COL 10
+#define ROW 10
+using std::cout;
+using std::endl;
+using std::cin;
+
+void Transpose(int arr[][COL])
+{
+    for (int i = 0; i &lt; ROW; ++i)
+    {
+        for (int j = 0; j &lt; COL; ++j)
+        {
+            if (i &lt; j)
+            {
+                int temp = arr[i][j];
+                arr[i][j] = arr[j][i];
+                arr[j][i] = temp;
+            }
+        }
+    }
+}
+void PrintArr(int arr[][COL])
+{
+    for (int i = 0; i &lt; ROW; ++i)
+    {
+        for (int j = 0; j &lt; COL; ++j)
+        {
+            cout &lt;&lt; arr[i][j] &lt;&lt; &quot; &quot;;
+        }
+        cout &lt;&lt; endl;
+    }
+}
+
+int main()
+{
+    int arr[ROW][COL], flag = 0;
+    for (int i = 0; i &lt; ROW; ++i)
+    {
+        for (int j = 0; j &lt; COL; ++j)
+        {
+            arr[i][j] = flag;
+            ++flag;
+        }
+    }
+    cout &lt;&lt; &quot;矩阵转换前：&quot; &lt;&lt; endl;
+    PrintArr(arr);
+    cout &lt;&lt; &quot;矩阵转换后：&quot; &lt;&lt; endl;
+    Transpose(arr);
+    PrintArr(arr);
+    return 0;
+}
+</code></pre>
+
+<h1>2、c++内存4区</h1>
+<h1>3、指针数组和数组指针</h1>
+<p>什么时候用指针数组？
+指针数组：（int *pArr[]）指针数组常常用于存储一些长度不相等的字符串数据。</p>
+<p>什么时候用指针数组？
+1）当作数组用，用来获取或设置数组元素。
+2）把一个比较长的数据结构传入函数，只需要一个指针就够了。
+3）传入变量的地址，用来读取或修改变量的值，主要是为了修改用。</p>
+<pre><code>#include&lt;iostream&gt;
+
+int main()
+{
+    char* p1 = &quot;hello&quot;;//hello存放在静态存储区
+    char* p2 = &quot;world&quot;;
+    char* pArr[2] = { p1, p2 };//指针数组
+    for (int i = 0; i &lt; 2; ++i)
+    {
+        std::cout &lt;&lt; pArr[i];
+    }
+
+    int arr[] = { 2, 0, 1, 9 };
+    int(*p)[4]; 
+    //p = arr;//错误！！！p要指向的是数组首地址，是要指向一整块数组，而arr是数组第一个元素的地址
+    p = &amp;arr;//当数组一样使用
+    std::cout &lt;&lt; *p[0] &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+
+<h1>4、string和char*转化</h1>
+<pre><code>#include&lt;iostream&gt;
+
+using std::string;
+using std::cout;
+using std::endl;
+
+int main()
+{
+    //string转char *
+    string str = &quot;abc&quot;;
+    char arr[20];
+    strcpy(arr,str.c_str());
+    cout &lt;&lt; arr &lt;&lt; endl;
+
+    //char *转string
+    string str2;
+    char arr2[] = &quot;hello&quot;;
+    str2 = arr2;//直接赋值
+    cout &lt;&lt; str2.c_str();
+    return 0;
+}  
+</code></pre>
+
+<h1>5、函数重载和运算符重载（多态）</h1>
+<pre><code>#include&lt;iostream&gt;
+
+int add(int a, int b)
+{
+    return a + b;
+}
+double add(double a, double b)
+{
+    return a + b;
+}
+int main()
+{
+    std::cout &lt;&lt; add(1, 2) &lt;&lt; std::endl;
+    std::cout&lt;&lt;add(2.2, 8.8) &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

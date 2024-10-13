@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../static/css/register.css" />
+</head>
+<body>
+    <div class="form-win">
+        <div style="margin-top:10px;text-align: center;">-欢迎登录！-</div>
+        <form action="/LoginCtl" method="post" id="" onsubmit="" style="text-align: right;line-height: 38px;padding-right: 54px;">
+            <dl>
+                <dd>{{form.username.label}}{{form.username}}</dd>
+                <dd>{{form.password.label}}{{form.password}}</dd>
+                <dd>{{form.remember_me}}{{form.remember_me.label}}</dd>
+                <dd>
+                    <input type="submit" id="" value="确定" style="width:80px;margin-left:10px;" />
+                    <input type="button" id="" value="取消" style="width:80px;margin-left:10px;" />
+                </dd>
+                <dd>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    <span>错误：{{ message }}</span>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </dd>
+            </dl>
+        </form>
+
+    </div>
+</body>
+</html>
